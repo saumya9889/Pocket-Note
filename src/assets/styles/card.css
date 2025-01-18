@@ -1,28 +1,18 @@
-/* .home-card {
-    width: 650px;
-    height: 300px;
-    margin: 20px auto;
-    padding: 26px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
 
-} */
 .modal-wrapper {
-    position: fixed; /* Fix the position of the backdrop */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     background-color:#000000ad;
-    display: flex; /* Use flexbox to center the modal */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    z-index: 1000; /* Ensure backdrop is above other content */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    z-index: 1000; 
   }
   
-  /* modal-content-wrapper (Modal Content) */
+ 
   .modal-content-wrapper {
     width: 650px;
     height: 300px;
@@ -32,7 +22,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     position: relative;
-    z-index: 1010; /* Ensure modal is above backdrop */
+    z-index: 1010; 
   }
   
 .heading {

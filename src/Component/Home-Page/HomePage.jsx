@@ -2,6 +2,8 @@ import { useState } from "react";
 // import {HomeCard} from '.';
 import { HomeCard } from "../HomeCard";
 import { BlankScreen } from "./blank-screen";
+import { SideBar } from "../side-bar";
+
 
 
 export const HomePage = () => {
@@ -17,8 +19,7 @@ export const HomePage = () => {
     <div className="home-page">
       {/* Sidebar */}
       <aside className="sidebar">
-        <h2>Pocket Notes</h2>
-        
+      <SideBar />
       </aside>
 
       {/* Main Content Area */}

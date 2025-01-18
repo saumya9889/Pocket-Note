@@ -19,7 +19,7 @@ export const BlankScreen = () => {
           </p>
         </div>
 
-        <div className="encryption-info">🔒<span> end-to-end encrypted</span></div>
+        <span className="encryption-info">🔒 end-to-end encrypted</span>
       </div>
     </>
   );

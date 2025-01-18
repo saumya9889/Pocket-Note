@@ -12,13 +12,6 @@
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   }
   
-  .sidebar h2 {
-    font-size: 36px;
-    position: sticky;
-    margin-top: 1.5rem;
-    text-align: center;
-  }
-  
   .main-content {
     width: 75%;
     background-color: rgba(218, 229, 245, 1);
@@ -26,41 +19,9 @@
     justify-content: center;
     align-items: center;
   }
-  
-  .content {
-    text-align: center;
-    position: relative;
-  }
-  
-  .content .illustration {
-    /* max-width: 250px; */
-    width: 626px;
-    margin-bottom: 20px;
-  }
-  
-  .content h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    font-family: "Roboto", sans-serif;
-  }
-  
-  .content p {
-    font-size: 1rem;
-    /* margin: 10px 0; */
-    font-family: system-ui;
-    font-weight: 600;
-    color: rgba(41, 41, 41, 1);
-  }
-  
-   .encryption-info {
-    position: absolute;
-  bottom: 20px;
-  width: 100%;
-  text-align: center;
-  font-size: 0.9rem;
-  color: rgba(41, 41, 41, 1);
-  }
-  
+
+   
+ 
   .fab {
     position: fixed;
     bottom: 45px;
