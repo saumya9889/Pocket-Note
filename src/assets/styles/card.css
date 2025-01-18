@@ -1,0 +1,161 @@
+/* .home-card {
+    width: 650px;
+    height: 300px;
+    margin: 20px auto;
+    padding: 26px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+
+} */
+.modal-wrapper {
+    position: fixed; /* Fix the position of the backdrop */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color:#000000ad;
+    display: flex; /* Use flexbox to center the modal */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    z-index: 1000; /* Ensure backdrop is above other content */
+  }
+  
+  /* modal-content-wrapper (Modal Content) */
+  .modal-content-wrapper {
+    width: 650px;
+    height: 300px;
+    padding: 26px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    position: relative;
+    z-index: 1010; /* Ensure modal is above backdrop */
+  }
+  
+.heading {
+    margin-right: 19.5rem;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 20px;
+    color: rgba(0, 0, 0, 1);
+}
+
+.create-name {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-family: "Open Sans", sans-serif;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.create-name span {
+    margin-bottom: 18px;
+    color: rgba(0, 0, 0, 1);
+    font-weight: 600;
+    text-align: center;
+    font-size: 24px;
+    
+}
+
+.create-name input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+    width: 360px;
+    margin: 0 auto;
+    height: 40px;
+
+}
+.create-name input::placeholder {
+    color: rgba(151, 151, 151, 1); 
+    font-size: 14px;
+    opacity: 0.8;
+  }
+
+.blank-screen-wrapper {
+  position: relative;
+}
+.color {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 52px;
+    color: rgba(0, 0, 0, 1);
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+}
+
+.color-option {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.color-option li {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    list-style: none;
+}
+
+.color-option li:hover {
+    border-color: #000;
+}
+
+.color-1 {
+    background-color: rgba(179, 139, 250, 1);
+}
+
+.color-2 {
+    background-color: rgba(255, 121, 242, 1);
+}
+
+.color-3 {
+    background-color: rgba(67, 230, 252, 1);
+}
+
+.color-4 {
+    background-color: rgba(241, 149, 118, 1);
+}
+
+.color-5 {
+    background-color: rgba(0, 71, 255, 1);
+}
+
+.color-6 {
+    background-color: rgba(102, 145, 255, 1);
+}
+
+.create-btn {
+    width: 23%;
+    padding: 10px;
+    background-color: rgba(0, 31, 139, 1);
+    color: #fff;
+    border: none;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 26rem;
+    margin-top: 1rem;
+
+}
+
+.create-btn:hover {
+    background-color: #0056b3;
+}
