@@ -1,7 +1,9 @@
 @import "./homepage.css";
-@import "./card.css";
+@import "./modal.css";
 @import "./sidebar.css";
 @import "./blankscreen.css";
+@import "./maincontent.css";
+@import "./note.css";
 
 
 *{

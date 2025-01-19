@@ -1,0 +1,65 @@
+.main-content-container {
+    font-family: Arial, sans-serif;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .header {
+    background-color: rgba(0, 31, 139, 1);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+ 
+  .input-section {
+    padding: 16px;
+    border-top: 2px solid #ddd;
+    background-color: #f9f9f9;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 31, 139, 1);
+
+  }
+  
+  textarea {
+    width: 100%;
+    height: 139px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+
+  }
+  
+  textarea:focus {
+    outline: none;
+    border-color: #0d47a1;
+    box-shadow: 0 0 5px rgba(13, 71, 161, 0.5);
+  }
+  
+  .text-area ::placeholder {
+    color: #888;
+    bottom: 10rem;
+    margin-bottom: 10 rem;
+  }
+  .input-section img {
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 29px;
+    bottom: 30px;
+    width: 28px;
+  }
+
+
+
+  

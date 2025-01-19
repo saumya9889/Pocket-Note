@@ -6,3 +6,32 @@
     margin-top: 1.5rem;
     text-align: center;
   }
+
+  .sidebar ul li{
+    list-style-type: none;
+    display: flex;
+    gap: 19px;
+    align-items: center;
+    text-transform: capitalize;
+    margin-top: 2rem;
+
+  }
+
+  .sidebar ul li .group-icon{
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+   cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #ffff;
+  }
+
+  .sidebar ul li .group-name{
+    font-size: 24px;
+    font-weight: 600;
+    font-family: "Open Sans", sans-serif;
+    cursor: pointer;
+  }

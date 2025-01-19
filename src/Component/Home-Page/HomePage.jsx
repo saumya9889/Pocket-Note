@@ -1,36 +1,36 @@
 import { useState } from "react";
-// import {HomeCard} from '.';
-import { HomeCard } from "../HomeCard";
-import { BlankScreen } from "./blank-screen";
-import { SideBar } from "../side-bar";
+import { Modal } from "../Modal";
+import  {SideBar}  from "../side-bar";
+import { MainContent } from "../MainContent";
 
 
 
 export const HomePage = () => {
 
   const [isCardOpen, setIsCardOpen] = useState(false);
-// const contextData = useContext((e) => {console.log(e)});
-  // Toggle function for card visibility
   const toggleCard = () => {
     setIsCardOpen(!isCardOpen);
+  };
+  const handleClose = () => {
+    setIsCardOpen(false);
   };
 
   return (
     <div className="home-page">
-      {/* Sidebar */}
       <aside className="sidebar">
       <SideBar />
       </aside>
 
       {/* Main Content Area */}
       <main className="main-content">
-         <BlankScreen />
+          <MainContent />
+         {/* <BlankScreen /> */}
       </main>
 
       {/* Floating Action Button */}
       <button className="fab" onClick={toggleCard}>+</button>
 
-      {isCardOpen && <HomeCard toggleCard={toggleCard} />}
+      {isCardOpen && <Modal handleClose={handleClose} toggleCard={toggleCard} />}
     </div>
   );
 };
