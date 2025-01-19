@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext} from "react";
 import { AppContext } from "./ContextApi";
 
 export const SideBar = () => {
@@ -6,8 +6,6 @@ export const SideBar = () => {
   // console.log(groups, "groups");
   console.log(pocketNotes, "groups");
 
-  // useEffect(() => {
-  //   console.log(pocketNotes, "groups");  }, []);
 
   const getFirstAndLastLetter = (name) => {
     if (!name) return "";

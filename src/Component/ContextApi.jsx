@@ -10,8 +10,9 @@ export const AppProvider = ({ children }) => {
     setGroups((prevGroups) => [...prevGroups, group]); // Add new group to the array
   };
    
+ 
   const handleAddPocketNote = (note) => {
-    setPocketNotes((prevNotes) => ({ ...prevNotes,   note })); // Store note as an object with an id as key
+    setPocketNotes(note); // Store note as an object with an id as key
   };
   return (
     <AppContext.Provider value={{ groups, HandleAddGroupData, handleAddPocketNote , pocketNotes}}>
