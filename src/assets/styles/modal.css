@@ -163,3 +163,41 @@
 .create-btn:hover {
     background-color: #0056b3;
 }
+
+/* responsive */
+@media only screen and (max-width: 480px) {
+    .modal-content-wrapper {
+        width: 445px;
+        height: 290px;
+      margin: 5% auto;
+    }
+    .heading{
+        margin-right: 13.5rem;
+    font-size: 20px;
+    }
+    .create-name{   
+        grid-template-columns: 138px 1fr;
+    }
+    .create-name span{
+        font-size: 18px;
+        text-align: left;
+    }
+    .create-name input{
+        width: 228px;
+        height: 30px;
+    }
+    .color{
+        font-size: 18px;
+        gap: 0;
+        text-align: left;
+        grid-template-columns: 170px 1fr;
+    }
+    .color-option li{
+        width: 30px;
+        height: 30px;
+    }
+    .create-btn{
+        width: 25%;
+        margin-left: 18rem;
+}
+}

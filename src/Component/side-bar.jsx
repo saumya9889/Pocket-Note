@@ -2,9 +2,19 @@ import React, { useContext} from "react";
 import { AppContext } from "./ContextApi";
 
 export const SideBar = () => {
-  const { groups, handleAddPocketNote, pocketNotes } = useContext(AppContext); // Access groups from context // yaha se data le rhe hai
-  // console.log(groups, "groups");
-  console.log(pocketNotes, "groups");
+  const { groups, handleAddPocketNote, pocketNotes, handleUserFlag } = useContext(AppContext); // Access groups from context // yaha se data le rhe hai
+  
+  const pocketNotesData = JSON.parse(localStorage.getItem("pocketNotes")) || {};
+console.log(pocketNotesData, "pocketNotesData");
+  const handleUserData = (group,index) => {
+    handleUserFlag(true);
+    const isNoteFlag = pocketNotesData.name ===  group.name ? true : false;
+    handleAddPocketNote({
+      ...group, 
+      notes: isNoteFlag ? pocketNotesData?.notes : []		
+    });
+  };
+  
 
 
   const getFirstAndLastLetter = (name) => {
@@ -15,11 +25,11 @@ export const SideBar = () => {
   };
 
   return (
-    <div className="sidebar-content-wraper">
-      <h2>Pocket Notes</h2>
+    <div className="sidebar-content-wrapper">
+      <h2 className="main-heading">Pocket Notes</h2>
       <ul>
         {groups?.map((group, index) => (
-          <li key={index} onClick={() => handleAddPocketNote(group)}>
+          <li key={index} onClick={() => handleUserData(group, index)}>
             <span
               className="group-icon"
               style={{ background: group.color || "#ffc0cb" }}

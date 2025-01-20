@@ -11,6 +11,7 @@ export const Modal = ({ handleClose }) => {
     const newGroup = {
       name: groupName,
       color: colorCode,
+      id: Date.now(),
     };
    
     HandleAddGroupData(newGroup); // Add group to context (array)

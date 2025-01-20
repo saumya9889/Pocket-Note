@@ -1,37 +1,56 @@
+.sidebar-content-wraper {
+  margin-top: 2rem;
+}
 
-  
-  .sidebar-wrapper h2 {
-    font-size: 36px;
-    position: sticky;
-    margin-top: 1.5rem;
-    text-align: center;
-  }
+.main-heading {
+  font-size: 36px;
+  position: sticky;
+  margin-top: 1.5rem;
+  text-align: center;
 
-  .sidebar ul li{
-    list-style-type: none;
-    display: flex;
-    gap: 19px;
-    align-items: center;
-    text-transform: capitalize;
-    margin-top: 2rem;
+}
 
-  }
+.sidebar ul li {
+  list-style-type: none;
+  display: flex;
+  gap: 19px;
+  align-items: center;
+  text-transform: capitalize;
+  margin-top: 2rem;
+  margin-left: 17px;
 
-  .sidebar ul li .group-icon{
-    width: 47px;
-    height: 47px;
-    border-radius: 50%;
-   cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: #ffff;
-  }
+}
 
-  .sidebar ul li .group-name{
-    font-size: 24px;
-    font-weight: 600;
-    font-family: "Open Sans", sans-serif;
-    cursor: pointer;
-  }
+.sidebar ul li:hover {
+  background-color: rgba(47, 47, 47, 0.17);
+  border-radius: 10px;
+  color: white;
+  width: 100%;
+}
+
+.sidebar ul li .group-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #ffff;
+}
+
+.sidebar ul li .group-name {
+  font-size: 28px;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+}
+
+
+/* responsive */
+/* @media (max-width: 480px) {
+    .sidebar-content-wrapper ul li{
+      margin-left: 0px;
+     }
+  } */

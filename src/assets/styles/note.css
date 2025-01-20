@@ -3,7 +3,8 @@
     background-color: #f0f4ff;
     padding: 20px;
     width: 100%;
-    height: 100%;
+    height: 61%;
+    overflow-y: scroll;
   }
   
 .note-card {
@@ -14,6 +15,7 @@
     margin-bottom: 15px;
     width: 90%;
     margin: 0 auto;
+    margin-top: 1rem;
   }
   
   .note-text {

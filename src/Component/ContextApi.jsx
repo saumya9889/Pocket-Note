@@ -1,23 +1,50 @@
-import React, { createContext, useState } from 'react';
+
+import React, { createContext, useState, useEffect } from "react";
 
 export const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
-  const [groups, setGroups] = useState([]); // Array to hold group objects
+  const [groups, setGroups] = useState(() => {
+    // Initialize groups from localStorage
+    const savedGroups = localStorage.getItem("groups");
+    return savedGroups ? JSON.parse(savedGroups) : [];
+  });
+
+  const [isUserFlag, setIsUserFlag] = useState(false);
+  const handleUserFlag = () => setIsUserFlag(true);
+
   const [pocketNotes, setPocketNotes] = useState();
 
   const HandleAddGroupData = (group) => {
-    setGroups((prevGroups) => [...prevGroups, group]); // Add new group to the array
+    setGroups((prevGroups) => {
+      const updatedGroups = [...prevGroups, group];
+      localStorage.setItem("groups", JSON.stringify(updatedGroups)); // Save to localStorage
+      return updatedGroups;
+    });
   };
-   
- 
+
   const handleAddPocketNote = (note) => {
-    setPocketNotes(note); // Store note as an object with an id as key
+    setPocketNotes(note); // Only update state, no localStorage interaction
+    localStorage.setItem("pocketNotes", JSON.stringify(note)); // Save to localStorage
   };
+
+  // useEffect(() => {
+  //   const savedPocketNotes = localStorage.getItem("pocketNotes");
+  //   if (savedPocketNotes) {
+  //     setPocketNotes(JSON.parse(savedPocketNotes)); // Retrieve from localStorage
+  //   }
+  // }, []);
+
+  // Sync groups with localStorage when they change
+  useEffect(() => {
+    localStorage.setItem("groups", JSON.stringify(groups));
+  }, [groups]);
+
   return (
-    <AppContext.Provider value={{ groups, HandleAddGroupData, handleAddPocketNote , pocketNotes}}>
+    <AppContext.Provider
+      value={{ groups, HandleAddGroupData, handleAddPocketNote, pocketNotes, isUserFlag, handleUserFlag }}
+    >
       {children}
     </AppContext.Provider>
   );
 };
-
