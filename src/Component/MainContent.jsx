@@ -5,7 +5,7 @@ import Send from "../assets/images/Vector.png";
 import { AppContext } from "./ContextApi";
 
 export const MainContent = () => {
-  const { pocketNotes, handleAddPocketNote } = useContext(AppContext); 
+  const { pocketNotes, handleAddPocketNote,handleIsMobile } = useContext(AppContext); 
   const [noteText, setNoteText] = useState(""); 
 
 
@@ -38,14 +38,16 @@ time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
-      e.preventDefault(); // Prevent default Enter key behavior
-      handleSendNote(); // Call the send function
+      e.preventDefault(); 
+      handleSendNote(); 
     }
   };
-console.log(pocketNotes,'pocketNotes');
+// console.log(pocketNotes,'pocketNotes');
+ 
   return (
     <div className="main-content-container">
       <div className="header">
+         <button  className="back-button" onClick={() => handleIsMobile(false)}> {'<'} </button>
         {pocketNotes?.name && (
           <>
             <span

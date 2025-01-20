@@ -13,7 +13,7 @@
   }
   
  
-  .modal-content-wrapper {
+  .modal-wrapper .modal-content-wrapper {
     width: 650px;
     height: 300px;
     padding: 26px;
@@ -166,7 +166,7 @@
 
 /* responsive */
 @media only screen and (max-width: 480px) {
-    .modal-content-wrapper {
+    .modal-wrapper .modal-content-wrapper {
         width: 445px;
         height: 290px;
       margin: 5% auto;
@@ -201,3 +201,14 @@
         margin-left: 18rem;
 }
 }
+
+@media only screen and (max-width: 375px) {
+    .modal-wrapper .modal-content-wrapper {
+      width: 345px !important;
+      height: 280px !important;
+    }
+  
+    .create-name {
+      grid-template-columns: 138px 1fr !important;
+    }
+  }

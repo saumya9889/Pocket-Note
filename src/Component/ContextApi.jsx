@@ -9,6 +9,7 @@ export const AppProvider = ({ children }) => {
     const savedGroups = localStorage.getItem("groups");
     return savedGroups ? JSON.parse(savedGroups) : [];
   });
+  const [isMobile, setIsMobile] = useState(false);
 
   const [isUserFlag, setIsUserFlag] = useState(false);
   const handleUserFlag = () => setIsUserFlag(true);
@@ -22,10 +23,18 @@ export const AppProvider = ({ children }) => {
       return updatedGroups;
     });
   };
-
+  
+//  const mobileVisible= window.innerWidth < 768;
+//  useEffect(() => {
+//   setIsMobile(true)
+//   }, []);
+  const handleIsMobile =(e) => {
+    setIsMobile(false);
+  }
   const handleAddPocketNote = (note) => {
     setPocketNotes(note); // Only update state, no localStorage interaction
     localStorage.setItem("pocketNotes", JSON.stringify(note)); // Save to localStorage
+    setIsMobile(true);
   };
 
   // useEffect(() => {
@@ -42,7 +51,7 @@ export const AppProvider = ({ children }) => {
 
   return (
     <AppContext.Provider
-      value={{ groups, HandleAddGroupData, handleAddPocketNote, pocketNotes, isUserFlag, handleUserFlag }}
+      value={{ groups, HandleAddGroupData, handleAddPocketNote, pocketNotes, isUserFlag, handleUserFlag,isMobile,handleIsMobile}}
     >
       {children}
     </AppContext.Provider>

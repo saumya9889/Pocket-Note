@@ -50,17 +50,32 @@
 /* sidebar */
 
 @media (max-width: 480px) {
-  .sidebar {
-    width: 100%;
+  .mobile-wrapper .sidebar {
+    width: 100% !important;
     height: 100%;
+    display: none;
+  }
+
+  .sidebar {
+    width: 100% !important;
   }
 
   .main-content {
     display: none;
   }
 
+  .mobile-wrapper .main-content {
+    display: block;
+    width: 100%;
+  }
+
+  .mobile-wrapper .main-content .main-content-container {
+    margin-top: 0;
+  }
+
   .fab {
-    left: 22rem;
+    right: 0;
   }
 
 }
+

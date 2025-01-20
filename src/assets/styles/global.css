@@ -15,3 +15,24 @@
 .container{
     width: 90%;
 }
+
+:root {
+    --modal-width: 650px;
+    --modal-height: 300px;
+  }
+  
+  @media only screen and (max-width: 480px) {
+    :root {
+      --modal-width: 445px;
+      --modal-height: 290px;
+    }
+  }
+  
+  @media only screen and (max-width: 375px) {
+    :root {
+      --modal-width: 345px;
+      --modal-height: 280px;
+    }
+  }
+  
+  

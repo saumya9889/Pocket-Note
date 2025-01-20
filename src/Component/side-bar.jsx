@@ -1,27 +1,26 @@
-import React, { useContext} from "react";
+import React, { useContext } from "react";
 import { AppContext } from "./ContextApi";
 
-export const SideBar = () => {
-  const { groups, handleAddPocketNote, pocketNotes, handleUserFlag } = useContext(AppContext); // Access groups from context // yaha se data le rhe hai
-  
+export const SideBar = ({ children }) => {
+  const { groups, handleAddPocketNote, pocketNotes, handleUserFlag } =
+    useContext(AppContext); // Access groups from context // yaha se data le rhe hai
+
   const pocketNotesData = JSON.parse(localStorage.getItem("pocketNotes")) || {};
-console.log(pocketNotesData, "pocketNotesData");
-  const handleUserData = (group,index) => {
+  console.log(pocketNotesData, "pocketNotesData");
+  const handleUserData = (group, index) => {
     handleUserFlag(true);
-    const isNoteFlag = pocketNotesData.name ===  group.name ? true : false;
+    const isNoteFlag = pocketNotesData.name === group.name ? true : false;
     handleAddPocketNote({
-      ...group, 
-      notes: isNoteFlag ? pocketNotesData?.notes : []		
+      ...group,
+      notes: isNoteFlag ? pocketNotesData?.notes : [],
     });
   };
-  
-
 
   const getFirstAndLastLetter = (name) => {
     if (!name) return "";
-    const firstLetter = name.charAt(0).toUpperCase(); // First letter
-    const lastLetter = name.charAt(name.length - 1).toUpperCase(); // Last letter
-    return `${firstLetter}${lastLetter}`; // Combine the letters
+    const firstLetter = name.charAt(0).toUpperCase(); 
+    const lastLetter = name.charAt(name.length - 1).toUpperCase(); 
+    return `${firstLetter}${lastLetter}`; 
   };
 
   return (
@@ -40,6 +39,7 @@ console.log(pocketNotesData, "pocketNotesData");
           </li>
         ))}
       </ul>
+      {children}
     </div>
   );
 };

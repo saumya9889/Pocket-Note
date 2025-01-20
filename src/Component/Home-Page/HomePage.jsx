@@ -1,3 +1,4 @@
+
 import { useState, useContext } from "react";
 import { Modal } from "../Modal";
 import  {SideBar}  from "../side-bar";
@@ -9,7 +10,7 @@ import { BlankScreen } from "./blank-screen";
 
 export const HomePage = () => {
 
-  const {isUserFlag} = useContext(AppContext);
+  const {isUserFlag, isMobile} = useContext(AppContext);
   // console.log(isUserFlag, "isUserFlag");
 
   const [isCardOpen, setIsCardOpen] = useState(false);
@@ -19,11 +20,14 @@ export const HomePage = () => {
   const handleClose = () => {
     setIsCardOpen(false);
   };
+  console.log(isMobile,'isMobile');
 
   return (
-    <div className="home-page">
+    <div className={`${isMobile ? 'mobile-wrapper' : ""} home-page`} >
       <aside className="sidebar">
-      <SideBar />
+      <SideBar>
+        <button className="fab" onClick={toggleCard}>+</button>
+      </SideBar>
       </aside>
 
       {/* Main Content Area */}
@@ -35,7 +39,7 @@ export const HomePage = () => {
       </main>
 
       {/* Floating Action Button */}
-      <button className="fab" onClick={toggleCard}>+</button>
+    
 
       {isCardOpen && <Modal handleClose={handleClose} toggleCard={toggleCard} />}
     </div>
