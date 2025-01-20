@@ -26,15 +26,12 @@ export const HomePage = () => {
     <div className={`${isMobile ? 'mobile-wrapper' : ""} home-page`} >
       <aside className="sidebar">
       <SideBar>
-        <button className="fab" onClick={toggleCard}>+</button>
+        <button className="create-icon-btn" onClick={toggleCard}>+</button>
       </SideBar>
       </aside>
 
       {/* Main Content Area */}
       <main className="main-content">
-          {/* <MainContent /> */}
-         {/* <BlankScreen /> */}
-      
          {isUserFlag  ? <MainContent />  : <BlankScreen />}
       </main>
 

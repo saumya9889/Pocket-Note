@@ -22,7 +22,7 @@
 
 
 
-.fab {
+.create-icon-btn {
   position: fixed;
   bottom: 45px;
   font-weight: 700;
@@ -41,7 +41,7 @@
   cursor: pointer;
 }
 
-.fab:hover {
+.create-icon-btn:hover {
   background-color: #003580;
 }
 
@@ -73,7 +73,7 @@
     margin-top: 0;
   }
 
-  .fab {
+  .create-icon-btn {
     right: 0;
   }
 

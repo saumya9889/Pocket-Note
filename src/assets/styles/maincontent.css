@@ -7,7 +7,9 @@
     height: 100%;
     width: 100%;
   }
-  
+  .main-content-container .back-button {
+    display: none;
+  }
   .header {
     background-color: rgba(0, 31, 139, 1);
     color: white;
@@ -80,6 +82,16 @@
   width: 28px;
 }
 
+@media only screen and (max-width: 480px) {
+  .back-button {
+    display: block!important;
+        color: #ffffff;
+        background: none;
+        border: none;
+        font-size: 28px;
+        font-weight: 600;
+  }
+}
 
 
 
